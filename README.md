@@ -51,7 +51,9 @@ yum clean all
  ssh-copy-id localhost (type yes and put the root password)
  
 6 Clone this repository
+
  git clone https://github.com/tso-ansible/minishift.git
+ 
  cd minishift/
  
 7 Run ansible-playbook
