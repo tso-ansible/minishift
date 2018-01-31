@@ -1,10 +1,11 @@
 # Minishift Installation
 
-Tested on Vmware Workstation v12 (check the 3 virtualization engines under the vcpu of vm centos7) and Centos7-physical (Venerari tested on Centos 7 laptop and Lazaroall testedon Vmware Workstation 12).  We run minishift with 4 vcpu, 12GB ram and 100GB disk, we don't know the limit.  ***Make sure your centos7 is server-gui when you select the installation for you need to run the minishift on the browser inside the vm.
+Tested on Vmware Workstation v12 (check the 3 virtualization engines under the vcpu of vm centos7) and Centos7-physical (Venerari tested on Centos 7 laptop and Lazaroall testedon Vmware Workstation 12).  We run minishift with 4 vcpu, 12GB ram and 100GB disk, we don't know the limit.  
+#Make sure your centos7 is server-gui when you select the installation for you need to run the minishift on the browser inside the vm.
 
 The resources arguments for vcpu/ram/disk can be change on group_var/all, please change it according to your resources.
 
-***you should not proceed if your vm or physical computer is not capable of virtualization by running "grep -E '(vmx|svm)' /proc/cpuinfo", it should output either vmx or svm.
+#you should not proceed if your vm or physical computer is not capable of virtualization by running "grep -E '(vmx|svm)' /proc/cpuinfo", it should output either vmx or svm.
 
 Do these after the vm had been provisioned,
 
@@ -27,7 +28,8 @@ yum clean all
  yum install epel-release
  yum update -y
  yum install gcc make kernel-devel -y
- reboot ***its important to reboot after kernel-devel installation
+ reboot 
+ #its important to reboot after kernel-devel installation
  
  yum git ansible -y
  
