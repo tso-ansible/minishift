@@ -64,7 +64,7 @@
     src: /tmp/openshift-origin-client-tools-v3.6.0-c4dd4cf-linux-64bit.tar.gz
     dest: /tmp    
     
- - name: MoveOpenshift client oc to /bin
+ - name: Move Openshift client oc to /bin
    shell: mv /tmp/openshift-origin-client-tools-v3.6.0-c4dd4cf-linux-64bit/oc /bin
    
  - name: Change owner group mode of Openshift client oc
