@@ -75,4 +75,7 @@
      mode: 0775
      
  - name: Run the minishift with arguments from all
-   command: /bin/minishift {{ param1 }}
+   command: ls -la /bin
+   register: miniout
+   
+ - debug: msg="{{ miniout.stdout }}"   
