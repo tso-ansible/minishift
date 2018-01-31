@@ -1,6 +1,6 @@
 # Minishift Installation
 
-Tested on Vmware Workstation v12 (check the 3 virtualization engines under the vcpu of vm centos7) and Centos7-physical (Venerari tested on Centos 7 laptop and Lazaroall tested on Vmware Workstation 12).  We run minishift with 4 vcpu, 12GB ram and 100GB disk, we don't know the limit.  ***Make sure your centos7 is server-gui when you select the installation for you need to run the minishift on the browser inside the vm. It's up to you later when you want to change this to bridge with kvm***
+Tested on Vmware Workstation v12 (check the 3 virtualization engines under the vcpu of vm centos7) and Centos7-physical (Venerari tested on Centos 7 laptop and Lazaroall tested on Vmware Workstation 12).  We run minishift with 4 vcpu, 12GB ram and 100GB disk, we don't know the limit.  ***Make sure your centos7 is server-gui when you select the installation for you need to run the minishift on the browser inside the vm. It's up to you later when you want to change this to bridge with kvm and make centos to no gui***
 
 The resources arguments for vcpu/ram/disk can be change on group_var/all, please change it according to your resources.
 
