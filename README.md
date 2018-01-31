@@ -8,9 +8,9 @@ The resources arguments for vcpu/ram/disk can be change on group_var/all, please
 
 Do these after the vm had been provisioned,
 
-1 create the centos7 repo
+1 create the centos7 repo but login as root first
 
-vi /etc/yum.repos.d/centos.repo
+$ vi /etc/yum.repos.d/centos.repo
 
 [centos]<br />
 name=CentOS $releasever - $basearch<br />
@@ -21,39 +21,39 @@ gpgkey=http://mirror.centos.org/centos/7/os/$basearch/RPM-GPG-KEY-CentOS-7
 
 2 Clean yum
 
-yum clean all
+$ yum clean all
 
 3 Install software
 
- yum install epel-release
+ $ yum install epel-release
  
- yum update -y
+ $ yum update -y
  
- yum install gcc make kernel-devel -y
+ $ yum install gcc make kernel-devel -y
  
- reboot<br /> 
+ $reboot<br /> 
  ***it's important to reboot after kernel-devel installation***
  
- yum git ansible -y
+ $yum git ansible -y
+  
+4 established ssh
  
-4 login to root if you haven't login 
+ $ ssh-keygen     
+ ***enter/enter/enter***
  
-5 established ssh
+ $ ssh-copy-id localhost           
+ ***type yes and put the root password***
  
- ssh-keygen     ***enter/enter/enter***
- 
- ssh-copy-id localhost           ***type yes and put the root password***
- 
-6 Clone this repository
+5 Clone this repository
 
- git clone https://github.com/tso-ansible/minishift.git
+ $ git clone https://github.com/tso-ansible/minishift.git
  
- cd minishift/
+ $ cd minishift/
  
-7 Run ansible-playbook
+6 Run ansible-playbook
 
- ansible-playbook -i inventory minishift.yml
+ $ ansible-playbook -i inventory minishift.yml
  
-8 Sorry the output is not accurate but to see the URL, run from shell "oc login" and it should show it and then you could go to your centos7 firefox and login on it.
+7 Sorry the output is not accurate but to see the URL, run from shell "oc login" and it should show it and then you could go to your centos7 firefox and login on it.
 
 # Created Venerari and Lazaroall.
