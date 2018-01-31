@@ -4,7 +4,7 @@ Tested on Vmware Workstation v12 (check the 3 virtualization engines under the v
 
 The resources arguments for vcpu/ram/disk can be change on group_var/all, please change it according to your resources.
 
-#you should not proceed if your vm or physical computer is not capable of virtualization by running "grep -E '(vmx|svm)' /proc/cpuinfo", it should output either vmx or svm.
+*You should not proceed if your vm or physical computer is not capable of virtualization by running "grep -E '(vmx|svm)' /proc/cpuinfo", it should output either vmx or svm.*
 
 Do these after the vm had been provisioned,
 
