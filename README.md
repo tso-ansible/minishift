@@ -57,6 +57,7 @@ yum clean all
  cd minishift/
  
 7 Run ansible-playbook
+
  ansible-playbook -i inventory minishift.yml
  
 8 Sorry the output is not accurate but to see the URL, run from shell "oc login" and it should show it and then you could go to your centos7 firefox and login on it.
