@@ -76,6 +76,3 @@
      
  - name: Run the minishift with arguments from all
    command: /bin/minishift {{ param1 }}
-   register: miniout
-   
- - debug: msg="{{ miniout.stdout }}"
