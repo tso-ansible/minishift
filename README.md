@@ -31,7 +31,7 @@ $ yum clean all
 
  $ yum install epel-release
  
- $ yum update -y
+ $ yum update -y<br />
  ***the epel-release should upgrade to 7-11 version***
  
  $ yum install gcc make kernel-devel -y
