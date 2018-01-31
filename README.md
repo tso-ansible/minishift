@@ -11,12 +11,19 @@ Do these after the vm had been provisioned,
 1 create the centos7 repo
 
 vi /etc/yum.repos.d/centos.repo
+
 [centos]
+
 name=CentOS $releasever - $basearch
+
 baseurl=http://mirror.centos.org/centos/7/os/$basearch/
+
 enabled=1
+
 gpgcheck=1
+
 gpgkey=http://mirror.centos.org/centos/7/os/$basearch/RPM-GPG-KEY-CentOS-7
+
 
 2 Clean yum
 
