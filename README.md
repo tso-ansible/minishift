@@ -4,7 +4,7 @@ Tested on Vmware Workstation v12 (check the 3 virtualization engines when creati
 
 ***Make sure your centos7 is server-gui when you select the installation for you need to run the minishift on the browser inside the vm. It's up to you later when you want to change this to bridge with kvm and make centos to no gui.***
 
-***This will only take about 10-15 min if you are using SSD including vm provisioning***
+***This will only take about 10-15 min if you are using SSD including vm provisioning.***
 
 The resources arguments for vcpu/ram/disk can be change on group_vars/all, please change it according to your resources.  If your laptop/computer are capable of 4 vcpus, 16GB ram and 512GB disk, then allocate a VM centos7 of 3 vcpus, 8GB ram and 80GB disk and then on the minishift (kvm vm), allocate 2 vcpus, 6GB ram and 60GB disk for example.  And do not run intensive applications like youtube or any video app.
 
