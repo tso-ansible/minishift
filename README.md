@@ -4,6 +4,8 @@ Tested on Vmware Workstation v12 (check the 3 virtualization engines under the v
 
 ***Make sure your centos7 is server-gui when you select the installation for you need to run the minishift on the browser inside the vm. It's up to you later when you want to change this to bridge with kvm and make centos to no gui.***
 
+***This will only take about 10-15 min if you are using SSD including vm provisioning***
+
 The resources arguments for vcpu/ram/disk can be change on group_vars/all, please change it according to your resources.
 
 ***You should not proceed if your vm or physical computer is not capable of virtualization by running "grep -E '(vmx|svm)' /proc/cpuinfo", it should output either vmx or svm.***
