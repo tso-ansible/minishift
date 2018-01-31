@@ -36,7 +36,7 @@ $ yum clean all
  
  $yum git ansible -y
   
-4 established ssh
+4 Established ssh
  
  $ ssh-keygen     
  ***enter/enter/enter***
