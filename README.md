@@ -40,9 +40,9 @@ yum clean all
  
 5 established ssh
  
- ssh-keygen (enter/enter/enter)
+ ssh-keygen     ***enter/enter/enter***
  
- ssh-copy-id localhost (type yes and put the root password)
+ ssh-copy-id localhost           ***type yes and put the root password***
  
 6 Clone this repository
 
