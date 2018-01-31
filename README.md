@@ -42,7 +42,7 @@ yum clean all
  
  yum git ansible -y
  
-4 login to root 
+4 login to root if you haven't login 
  
 5 established ssh
  
