@@ -56,4 +56,4 @@ $ yum clean all
  
 7. Sorry the output is not accurate but to see the URL, run from shell "oc login" and it should show it and then you could go to your centos7 firefox and login on it.
 
-# Created Venerari and Lazaroall.
+# Created by Venerari and Lazaroall.
