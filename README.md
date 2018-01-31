@@ -31,10 +31,10 @@ $ yum clean all
  
  $ yum install gcc make kernel-devel -y
  
- $reboot<br /> 
+ $ reboot<br /> 
  ***it's important to reboot after kernel-devel installation***
  
- $yum git ansible -y
+ $ yum install git ansible -y
   
 4. Established ssh
  
