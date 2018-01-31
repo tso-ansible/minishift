@@ -8,7 +8,7 @@ The resources arguments for vcpu/ram/disk can be change on group_var/all, please
 
 Do these after the vm had been provisioned,
 
-1 create the centos7 repo but login as root first
+1. Create the centos7 repo but login as root first
 
 $ vi /etc/yum.repos.d/centos.repo
 
@@ -19,11 +19,11 @@ enabled=1<br />
 gpgcheck=1<br />
 gpgkey=http://mirror.centos.org/centos/7/os/$basearch/RPM-GPG-KEY-CentOS-7
 
-2 Clean yum
+2. Clean yum
 
 $ yum clean all
 
-3 Install software
+3. Install software
 
  $ yum install epel-release
  
@@ -36,7 +36,7 @@ $ yum clean all
  
  $yum git ansible -y
   
-4 Established ssh
+4. Established ssh
  
  $ ssh-keygen     
  ***enter/enter/enter***
@@ -44,16 +44,16 @@ $ yum clean all
  $ ssh-copy-id localhost           
  ***type yes and put the root password***
  
-5 Clone this repository
+5. Clone this repository
 
  $ git clone https://github.com/tso-ansible/minishift.git
  
  $ cd minishift/
  
-6 Run ansible-playbook
+6. Run ansible-playbook
 
  $ ansible-playbook -i inventory minishift.yml
  
-7 Sorry the output is not accurate but to see the URL, run from shell "oc login" and it should show it and then you could go to your centos7 firefox and login on it.
+7. Sorry the output is not accurate but to see the URL, run from shell "oc login" and it should show it and then you could go to your centos7 firefox and login on it.
 
 # Created Venerari and Lazaroall.
