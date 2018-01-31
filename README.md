@@ -2,7 +2,7 @@
 
 Tested on Vmware Workstation v12 (check the 3 virtualization engines under the vcpu of vm centos7) and Centos7-physical (Venerari tested on Centos 7 laptop and Lazaroall testedon Vmware Workstation 12).  We can run minishift with 4 vcpu and 12GBram, we don't know the limit.  ***Make sure your centos7 is server-gui when you select the installation for you need to run the minishift on the browser inside the vm.
 
-The reources arguments for vcpu/ram/disk can be change on group_var/all, please change it according to your resources.
+The resources arguments for vcpu/ram/disk can be change on group_var/all, please change it according to your resources.
 
 ***you should not proceed if your vm or physical computer is not capable of virtualization by running "grep -E '(vmx|svm)' /proc/cpuinfo", it should output either vmx or svm.
 
