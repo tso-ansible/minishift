@@ -31,8 +31,8 @@ yum clean all
  
  yum install gcc make kernel-devel -y
  
- reboot 
- ***its important to reboot after kernel-devel installation***
+ reboot<br /> 
+ ***it's important to reboot after kernel-devel installation***
  
  yum git ansible -y
  
