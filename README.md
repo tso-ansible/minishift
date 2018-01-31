@@ -8,7 +8,7 @@ Tested on Vmware Workstation v12 (check the 3 virtualization engines when creati
 
 The resources arguments for vcpu/ram/disk can be change on group_vars/all, please change it according to your resources.  If your laptop/computer are capable of 4 vcpus, 16GB ram and 512GB disk, then allocate a VM centos7 of 3 vcpus, 8GB ram and 80GB disk and then on the minishift (kvm vm), allocate 2 vcpus, 6GB ram and 60GB disk for example.  And do not run intensive applications like youtube or any video app.
 
-***You should not proceed if your vm or physical computer is not capable of virtualization by running "grep -E '(vmx|svm)' /proc/cpuinfo", it should output either vmx or svm.***
+***You can't proceed if your vm or physical computer is not capable of virtualization by running "grep -E '(vmx|svm)' /proc/cpuinfo", it should output either vmx or svm.***
 
 Do these after the vm had been provisioned,
 
