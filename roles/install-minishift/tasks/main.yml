@@ -1,0 +1,78 @@
+---
+ - name: Install KVM
+   yum:  pkg={{ item }} state=present   
+   with_items:
+     - qemu-kvm 
+     - qemu-img 
+     - virt-manager 
+     - libvirt 
+     - libvirt-python 
+     - libvirt-client 
+     - virt-install 
+     - virt-viewer 
+     - bridge-utils
+   when: ansible_os_family == "RedHat"
+
+ - name: Enable KVM service
+   systemd: enabled=yes name=libvirtd
+
+ - name: Start KVM service
+   systemd: state=started name=libvirtd
+
+ - name: Download minishift
+   get_url:
+    url: https://github.com/minishift/minishift/releases/download/v1.12.0/minishift-1.12.0-linux-amd64.tgz
+    dest: /tmp
+    
+ - name: Extract minishift
+   unarchive:
+    src: /tmp/minishift-1.12.0-linux-amd64.tgz
+    dest: /tmp
+    
+ - name: Move minishift to /bin
+   shell: mv /tmp/minishift-1.12.0-linux-amd64/minishift /bin
+   
+ - name: Change owner group mode minishift
+   file:
+     path: /bin/minishift
+     owner: root
+     group: root
+     mode: 0775
+
+ - name: Download docker-machine-driver-kvm
+   get_url:
+    url: https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.7.0/docker-machine-driver-kvm
+    dest: /tmp
+    
+ - name: Move docker-machine-driver-kvm to /bin
+   shell: mv /tmp/docker-machine-driver-kvm /bin
+   
+ - name: Change owner group mode docker-machine-driver-kvm
+   file:
+     path: /bin/docker-machine-driver-kvm
+     owner: root
+     group: root
+     mode: 0775
+
+ - name: Download Openshift client oc
+   get_url:
+    url: https://github.com/openshift/origin/releases/download/v3.6.0/openshift-origin-client-tools-v3.6.0-c4dd4cf-linux-64bit.tar.gz
+    dest: /tmp
+    
+ - name: Extract Openshift client oc
+   unarchive:
+    src: /tmp/openshift-origin-client-tools-v3.6.0-c4dd4cf-linux-64bit.tar.gz
+    dest: /tmp    
+    
+ - name: MoveOpenshift client oc to /bin
+   shell: mv /tmp/openshift-origin-client-tools-v3.6.0-c4dd4cf-linux-64bit/oc /bin
+   
+ - name: Change owner group mode of Openshift client oc
+   file:
+     path: /bin/oc
+     owner: root
+     group: root
+     mode: 0775
+     
+ - name: Run the minishift with arguments
+   script: /bin/minishift --some-arguments {{ param1 }}
