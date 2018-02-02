@@ -10,10 +10,6 @@ yum update -y
 
 yum install gcc make kernel-devel -y
 
-if [ ! -f ~/.ssh/id_rsa ]; then
-	ssh-keygen -q -f ~/.ssh/id_rsa -N ""
-	cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-	ssh -o StrictHostKeyChecking=no localhost "pwd" < /dev/null
-fi
 
 reboot
+
