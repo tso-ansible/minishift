@@ -1,6 +1,8 @@
 
 #!/bin/bash
 
+update-rc.d script2.sh remove
+
 if [ ! -f ~/.ssh/id_rsa ]; then
 	ssh-keygen -q -f ~/.ssh/id_rsa -N ""
 	cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
@@ -19,3 +21,5 @@ cd /tmp/minishift/
 ansible-playbook -i inventory minishift.yml
 
 echo "type oc login on your shell"
+
+touch /tmp/minishitisdone
