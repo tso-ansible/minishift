@@ -10,56 +10,17 @@ The resources arguments for vcpu/ram/disk can be change on group_vars/all, pleas
 
 ***You can't proceed if your vm or physical computer is not capable of virtualization by running "grep -E '(vmx|svm)' /proc/cpuinfo", it should output either vmx or svm.***
 
-Do these after the vm had been provisioned,
+Do these after the vm had been provisioned and it should be executed to itself, login/su/sudo to root.
 
-1. Create the centos7 repo but login as root first
+```
+curl https://raw.githubusercontent.com/tso-ansible/minishift/master/script1.sh | /bin/bash
 
-$ vi /etc/yum.repos.d/centos.repo
+This will reboot, please login again as root, execute below (when we have time, we will make this only one script...)
 
-[centos]<br />
-name=CentOS $releasever - $basearch<br />
-baseurl=http://mirror.centos.org/centos/7/os/$basearch/<br />
-enabled=1<br />
-gpgcheck=1<br />
-gpgkey=http://mirror.centos.org/centos/7/os/$basearch/RPM-GPG-KEY-CentOS-7
-
-2. Clean yum
-
-$ yum clean all
-
-3. Install software
-
- $ yum install epel-release
+curl https://raw.githubusercontent.com/tso-ansible/minishift/master/script2.sh | /bin/bash
+```
  
- $ yum update -y<br />
- ***the epel-release should upgrade to 7-11 version***
- 
- $ yum install gcc make kernel-devel -y
- 
- $ reboot<br /> 
- ***it's important to reboot after kernel-devel installation***
- 
- $ yum install git ansible -y
-  
-4. Established ssh
- 
- $ ssh-keygen     
- ***enter/enter/enter***
- 
- $ ssh-copy-id localhost           
- ***type yes and put the root password***
- 
-5. Clone this repository
-
- $ git clone https://github.com/tso-ansible/minishift.git
- 
- $ cd minishift/
- 
-6. Run ansible-playbook
-
- $ ansible-playbook -i inventory minishift.yml
- 
-7. Sorry the output is not accurate but to see the URL, run from shell "oc login" and it should show it and then you could go to your centos7 firefox and login on it.
+Run from shell "oc login" and it should show the URL and then you could go to your centos7 firefox and login on it.
 
 ***The minishift is sensitive, installing any other software will break it.***
 
