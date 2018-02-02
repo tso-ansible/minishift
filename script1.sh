@@ -8,7 +8,7 @@ yum install epel-release -y
 
 yum update -y
 
-yum install git ansible wget -y
+yum install gcc make kernel-devel -y
 
 if [ ! -f ~/.ssh/id_rsa ]; then
 	ssh-keygen -q -f ~/.ssh/id_rsa -N ""
@@ -16,4 +16,4 @@ if [ ! -f ~/.ssh/id_rsa ]; then
 	ssh -o StrictHostKeyChecking=no localhost "pwd" < /dev/null
 fi
 
-cd /tmp
+
