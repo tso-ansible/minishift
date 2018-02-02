@@ -1,8 +1,6 @@
 
 #!/bin/bash
 
-rm -f /usr/local/sbin/script2.sh
-
 if [ ! -f ~/.ssh/id_rsa ]; then
 	ssh-keygen -q -f ~/.ssh/id_rsa -N ""
 	cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
@@ -23,3 +21,10 @@ ansible-playbook -i inventory minishift.yml
 echo "type oc login on your shell"
 
 touch /tmp/minishitisdone
+
+systemctl stop script2.service
+systemctl disable script2.service
+rm -f /etc/systemd/system/script2.service
+
+systemctl daemon-reload
+systemctl reset-failed
