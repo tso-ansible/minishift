@@ -17,8 +17,6 @@ cd /tmp/minishift/
 
 ansible-playbook -i inventory minishift.yml
 
-echo "type oc login on your shell"
-
 touch /tmp/minishitisdone
 
 systemctl stop script2.service
