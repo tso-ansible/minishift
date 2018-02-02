@@ -7,7 +7,6 @@ if [ ! -f ~/.ssh/id_rsa ]; then
 	ssh -o StrictHostKeyChecking=no localhost "pwd" < /dev/null
 fi
 
-
 yum install git ansible -y
 
 cd /tmp
@@ -25,6 +24,6 @@ touch /tmp/minishitisdone
 systemctl stop script2.service
 systemctl disable script2.service
 rm -f /etc/systemd/system/script2.service
-
+rm -f /root/script2.sh
 systemctl daemon-reload
 systemctl reset-failed
