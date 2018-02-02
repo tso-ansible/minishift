@@ -16,4 +16,4 @@ if [ ! -f ~/.ssh/id_rsa ]; then
 	ssh -o StrictHostKeyChecking=no localhost "pwd" < /dev/null
 fi
 
-
+reboot
