@@ -1,3 +1,13 @@
+
+#!/bin/bash
+
+if [ ! -f ~/.ssh/id_rsa ]; then
+	ssh-keygen -q -f ~/.ssh/id_rsa -N ""
+	cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+	ssh -o StrictHostKeyChecking=no localhost "pwd" < /dev/null
+fi
+
+
 yum install git ansible -y
 
 cd /tmp
