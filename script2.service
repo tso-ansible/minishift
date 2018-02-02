@@ -1,0 +1,10 @@
+[Unit]
+Description=script2.sh
+
+[Service]
+Type=simple
+ExecStart=/root/script2.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
