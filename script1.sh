@@ -2,9 +2,15 @@
 
 curl -o  /etc/yum.repos.d/centos.repo https://raw.githubusercontent.com/tso-ansible/ansible-tower/master/centos.repo
 
-curl -o  /usr/local/sbin/script2.sh https://raw.githubusercontent.com/venerari/minishift/master/script2.sh
+curl -o  /etc/systemd/system/script2.service https://raw.githubusercontent.com/venerari/minishift/master/script2.service
 
-chmod u+x /usr/local/bin/script2.sh
+curl -o  /root/script2.sh https://raw.githubusercontent.com/venerari/minishift/master/script2.sh
+
+chmod u+x /root/script2.sh
+
+systemctl daemon-reload
+
+systemctl enable script2.service
 
 yum clean all
 
