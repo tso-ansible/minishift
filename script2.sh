@@ -1,7 +1,7 @@
 
 #!/bin/bash
 
-update-rc.d script2.sh remove
+rm -f /usr/local/sbin/script2.sh
 
 if [ ! -f ~/.ssh/id_rsa ]; then
 	ssh-keygen -q -f ~/.ssh/id_rsa -N ""
