@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 if [ ! -f ~/.ssh/id_rsa ]; then
