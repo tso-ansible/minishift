@@ -23,6 +23,4 @@ Run from shell "oc login" and it should show the URL and then you could go to yo
 
 ***The minishift is sensitive, installing any other software will break it.***
 
-tEST
-
 # Created by Venerari and Lazaroall.
