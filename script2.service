@@ -1,5 +1,5 @@
 [Unit]
-Description=script2.sh
+Description=This is needed only once
 After=network.target
 
 [Service]
