@@ -21,7 +21,7 @@ check for file existence of /tmp/minishiftisdone if it is done,
 you may check the process by "ps -ef | grep script2.sh" if it still running on the background.
 
  
-Run from shell "oc login" and it should show the URL and then you could go to your centos7 firefox and login on it.
+Run from shell "oc login" as root user and it should show the URL and then you could go to your centos7 firefox and login on it.
 
 ***The minishift is sensitive, installing any other software will break it.***
 
