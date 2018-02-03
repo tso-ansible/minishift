@@ -16,7 +16,7 @@ cd /tmp/minishift/
 
 ansible-playbook -i inventory minishift.yml
 
-touch /tmp/minishitisdone
+touch /tmp/minishiftisdone
 
 systemctl stop script2.service
 systemctl disable script2.service
