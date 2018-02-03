@@ -6,7 +6,7 @@ curl -o  /etc/systemd/system/script2.service https://raw.githubusercontent.com/v
 
 curl -o  /root/script2.sh https://raw.githubusercontent.com/venerari/minishift/master/script2.sh
 
-chmod u+x /root/script2.sh
+chmod +x /root/script2.sh
 
 systemctl daemon-reload
 
@@ -26,4 +26,4 @@ echo "the second script on the process ps -ef script2.sh"
 
 sleep 10
 
-reboot
+systemctl reboot
