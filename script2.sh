@@ -10,7 +10,7 @@ yum install git ansible -y
 
 cd /tmp
 
-clone https://github.com/venerari/minishift.git
+git clone https://github.com/venerari/minishift.git
 
 cd /tmp/minishift/
 
