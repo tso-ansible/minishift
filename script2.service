@@ -1,5 +1,6 @@
 [Unit]
 Description=script2.sh
+After=network.target
 
 [Service]
 Type=simple
