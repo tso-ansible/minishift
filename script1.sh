@@ -24,6 +24,6 @@ echo "This will reboot now, unfortunately after reboot, it should continue to in
 echo "Check the /tmp/minishitisdone file existence.  If it does not exist, it is not done, you may also check"
 echo "the second script on the process ps -ef script2.sh"
 
-sleep 10
+sleep 30
 
 systemctl reboot
