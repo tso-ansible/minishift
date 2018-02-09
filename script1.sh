@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -o  /etc/yum.repos.d/centos.repo https://raw.githubusercontent.com/tso-ansible/ansible-tower/master/centos.repo
+sh -c 'echo -e "[centos]\nname=CentOS $releasever - $basearch\nbaseurl=http://mirror.centos.org/centos/7/os/\$basearch/\nenabled=1\ngpgcheck=1\ngpgkey=http://mirror.centos.org/centos/7/os/\$basearch/RPM-GPG-KEY-CentOS-7" > /etc/yum.repos.d/centos.repo'
 
 curl -o  /etc/systemd/system/script2.service https://raw.githubusercontent.com/venerari/minishift/master/script2.service
 
@@ -24,6 +24,6 @@ echo "This will reboot now, unfortunately after reboot, it should continue to in
 echo "Check the /tmp/minishitisdone file existence.  If it does not exist, it is not done, you may also check"
 echo "the second script on the process ps -ef script2.sh"
 
-sleep 10
+sleep 30
 
 systemctl reboot
