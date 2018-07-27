@@ -25,4 +25,3 @@ Run from shell "oc login" as root user and it should show the URL and then you c
 
 ***The minishift is sensitive, installing any other software will break it.***
 
-# Created by Venerari and Lazaroall.
